@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adja Soukeyna Diop · Portfolio</title>
+<meta name="description" content="Portfolio d'Adja Soukeyna Diop, élève ingénieure en Génie Informatique et Télécommunications à l'École Polytechnique de Thiès : systèmes distribués, IA, data, web, mobile et design.">
+<meta property="og:title" content="Adja Soukeyna Diop · Portfolio">
+<meta property="og:description" content="Portfolio d'Adja Soukeyna Diop, élève ingénieure en Génie Informatique et Télécommunications à l'École Polytechnique de Thiès : systèmes distribués, IA, data, web, mobile et design.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/photo.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%237A1F35'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-style='italic' font-size='32' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600;1,9..144,700&family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: soft and creative — pale rose ground, white rounded surfaces, one burgundy accent, a small Senegal-green touch. Single light look by choice. */
+:root{
+  --bg:#FBF1EF; --surface:#FFFFFF; --rose:#F2C9C4; --rose-soft:#F7E0DC; --line:#EFD3CE;
+  --ink:#3A1622; --muted:#7E5A65; --burgundy:#7A1F35; --burgundy-2:#962A45; --green:#00853F; --yellow:#FDEF42; --red:#E31B23;
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:28px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--f-display);font-weight:600;line-height:1.08;text-wrap:balance}
+h2{font-size:clamp(2.1rem,4.4vw,3.2rem);font-style:italic;color:var(--burgundy)}
+h3{font-size:1.4rem}
+:focus-visible{outline:3px solid var(--burgundy);outline-offset:3px;border-radius:10px}
+svg.i{width:1.05em;height:1.05em;flex:none}
+.kicker{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border-radius:999px;padding:7px 14px;font-size:.9rem}
+.flag{display:inline-flex;width:20px;height:13px;border-radius:3px;overflow:hidden;flex:none}
+.flag i{flex:1}.flag i:nth-child(1){background:var(--green)}.flag i:nth-child(2){background:var(--yellow)}.flag i:nth-child(3){background:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;font-family:var(--f-body);font-weight:600;font-size:.98rem;text-decoration:none;border:0;cursor:pointer;background:var(--surface);color:var(--ink);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--burgundy);color:#fff}
+.btn.primary:hover{background:var(--burgundy-2)}
+.btn.sm{padding:9px 16px;font-size:.9rem}
+
+/* nav */
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);padding-block:16px}
+.navbar{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-weight:700;font-size:1.15rem;text-decoration:none}
+.logo span{color:var(--green)}
+.navlinks{display:flex;gap:4px;background:var(--surface);border-radius:999px;padding:5px}
+.navlinks a{text-decoration:none;color:var(--burgundy);font-weight:500;font-size:.95rem;padding:7px 14px;border-radius:999px}
+.navlinks a:hover{background:var(--rose-soft)}
+@media (max-width:760px){.navlinks{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center;padding-block:40px 80px}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero h1{font-style:italic;font-size:clamp(3rem,7.4vw,5.6rem);line-height:.98;letter-spacing:-.015em;color:var(--ink)}
+.hero h1 .last{color:var(--burgundy)}
+.lede{font-size:1.12rem;color:var(--muted);max-width:56ch}
+.lede b{color:var(--ink);font-weight:600}
+.status{display:flex;flex-direction:column;gap:6px;padding:16px 20px;background:var(--surface);border-radius:20px;max-width:520px}
+.status div{display:flex;gap:10px;align-items:baseline;font-size:.97rem}
+.status b{font-weight:600}
+.status .dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex:none;transform:translateY(-1px)}
+.status .dot.b{background:var(--burgundy)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.portrait{position:relative;width:clamp(260px,30vw,380px);aspect-ratio:1/1;max-width:100%;margin-top:9%}
+.portrait .disc{position:absolute;inset:0;border-radius:50%;background:var(--rose)}
+.portrait .cut{position:absolute;left:0;right:0;bottom:0;top:-16%;overflow:hidden;border-radius:0 0 50% 50% / 0 0 43.1% 43.1%}
+.portrait img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:98%;max-width:none}
+.portrait .ring{position:absolute;inset:-14px;border-radius:50%;border:1.5px dashed var(--burgundy);opacity:.35}
+.portrait .tag{position:absolute;right:-8px;bottom:14%;background:var(--surface);border-radius:999px;padding:9px 15px;font-weight:600;font-size:.9rem;display:flex;gap:8px;align-items:center;box-shadow:0 8px 24px -12px rgba(122,31,53,.35)}
+.portrait .tag i{width:9px;height:9px;border-radius:50%;background:var(--green)}
+@media (max-width:860px){.hero{grid-template-columns:1fr;gap:28px;padding-top:16px}.portrait{order:-1;width:min(300px,78vw);margin:12px auto 0}}
+
+section{padding-block:90px;scroll-margin-top:80px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.head .l{display:flex;flex-direction:column;gap:12px;max-width:60ch}
+.head p{color:var(--muted)}
+
+/* article */
+.paper{display:grid;grid-template-columns:1.05fr 1fr;gap:0;background:var(--surface);border-radius:36px;overflow:hidden}
+.paper .sheet{background:var(--rose-soft);padding:40px;display:flex;align-items:center;justify-content:center}
+.paper .sheet img{width:100%;max-width:520px;border-radius:14px;box-shadow:0 22px 40px -24px rgba(58,22,34,.45)}
+.paper .txt{padding:40px;display:flex;flex-direction:column;gap:18px}
+.paper h3{font-size:clamp(1.5rem,2.4vw,2rem);font-style:italic;color:var(--burgundy)}
+.paper .authors{color:var(--muted);font-size:.95rem}
+.paper ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.paper li{display:flex;gap:12px;align-items:baseline}
+.paper li b{font-family:var(--f-display);font-style:italic;font-size:1.15rem;color:var(--burgundy);min-width:5.2em}
+@media (max-width:860px){.paper{grid-template-columns:1fr}.paper .sheet,.paper .txt{padding:24px}}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.card{background:var(--surface);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;border:0;padding:0;text-align:left;font:inherit;color:inherit;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 44px -28px rgba(122,31,53,.45)}
+.card.wide{grid-column:1/-1;display:grid;grid-template-columns:1.25fr 1fr}
+.media{background:var(--rose-soft);display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;min-height:250px;overflow:hidden}
+.media img{border-radius:14px;max-width:100%}
+.media.cover{padding:0}
+.media.cover img{width:100%;height:270px;object-fit:cover;object-position:top;border-radius:0}
+.media.contain img{max-height:230px;width:auto}
+.media.phones img{height:300px;width:auto;border-radius:22px;box-shadow:0 18px 30px -20px rgba(58,22,34,.5)}
+.media.phones img:nth-child(2){transform:translateY(-14px)}
+.media.duo{gap:12px;padding:22px}
+.media.duo img{width:calc(50% - 6px);height:200px;object-fit:cover;object-position:left top}
+.body{padding:24px 26px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.body .kicker{color:var(--burgundy);opacity:.75}
+.body p{color:var(--muted);font-size:.98rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
+.tags span{background:var(--bg);border-radius:999px;padding:4px 11px;font-size:.8rem;color:var(--ink)}
+.go{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--burgundy);font-size:.95rem;margin-top:4px}
+.card:hover .go svg{transform:translateX(4px)}
+.go svg{transition:transform .2s}
+.layers{display:flex;flex-direction:column;gap:8px;width:100%;max-width:300px}
+.layers span{border-radius:12px;padding:10px 14px;font-weight:600;font-size:.88rem;display:flex;justify-content:space-between}
+.layers span small{font-weight:400;color:var(--muted)}
+.l1{background:#fff}.l2{background:#F2D7C4}.l3{background:#EDE6EA}.l4{background:#F8E7A6}.l5{background:var(--burgundy);color:#fff}.l5 small{color:#F2C9C4!important}
+@media (max-width:860px){.grid{grid-template-columns:1fr}.card.wide{grid-template-columns:1fr}.media.phones img{height:230px}.media.phones img:nth-child(n+3){display:none}}
+
+.more{margin-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.more h3{font-size:1.25rem;margin-bottom:14px;font-style:italic;color:var(--burgundy)}
+.rows{display:flex;flex-direction:column;background:var(--surface);border-radius:24px;padding:6px 8px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 14px;border-radius:16px;cursor:pointer;background:transparent;border:0;font:inherit;color:inherit;text-align:left;width:100%}
+.row+.row{border-top:1px solid var(--rose-soft)}
+.row:hover{background:var(--bg)}
+.row b{font-weight:600;display:block}
+.row span.d{color:var(--muted);font-size:.9rem}
+.row .t{font-size:.78rem;color:var(--burgundy);background:var(--rose-soft);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--surface);border-radius:999px;padding:8px 14px;font-size:.92rem}
+@media (max-width:860px){.more{grid-template-columns:1fr}}
+
+/* design */
+.design{background:var(--rose);border-radius:40px;padding:56px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.design h2{color:var(--burgundy)}
+.design .txt{display:flex;flex-direction:column;gap:20px}
+.design p{max-width:48ch}
+.design .shots{display:flex;gap:14px;justify-content:center}
+.design .shots img{height:330px;width:auto;border-radius:24px;box-shadow:0 24px 40px -22px rgba(58,22,34,.55)}
+.design .shots img:last-child{transform:translateY(26px)}
+@media (max-width:860px){.design{grid-template-columns:1fr;padding:30px 22px}.design .shots img{height:240px}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.sk{background:var(--surface);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.sk h3{font-size:1.2rem;font-style:italic;color:var(--burgundy)}
+.sk .chips span{background:var(--bg);font-size:.88rem;padding:6px 12px}
+@media (max-width:900px){.skills{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.skills{grid-template-columns:1fr}}
+
+/* parcours */
+.path{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.col{background:var(--surface);border-radius:28px;padding:30px}
+.col h3{font-style:italic;color:var(--burgundy);margin-bottom:18px}
+.steps{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--rose);display:flex;flex-direction:column;gap:22px}
+.steps li{position:relative;display:flex;flex-direction:column;gap:4px}
+.steps li::before{content:"";position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--burgundy)}
+.steps li.win::before{background:var(--yellow)}
+.steps .when{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
+.steps b{font-weight:600;font-size:1.05rem}
+.steps p{color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.path{grid-template-columns:1fr}.col{padding:24px}}
+
+/* about */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.about .big{font-family:var(--f-display);font-style:italic;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.15;color:var(--burgundy);text-wrap:balance}
+.about .txt{display:flex;flex-direction:column;gap:16px;color:var(--ink)}
+.about .txt b{color:var(--burgundy);font-weight:600}
+.quals{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.quals span{background:var(--surface);border-radius:999px;padding:8px 15px;font-weight:500}
+.quals span:first-child{background:var(--burgundy);color:#fff}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:24px}}
+
+/* contact */
+.contact{background:var(--surface);border-radius:40px;padding:56px;display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+.contact h2{font-size:clamp(2.4rem,5.4vw,4rem)}
+.contact .links{display:flex;flex-wrap:wrap;gap:12px}
+.mail{display:flex;align-items:center;gap:12px;background:var(--bg);border-radius:999px;padding:8px 8px 8px 18px;flex-wrap:wrap;max-width:100%}
+.mail span{font-weight:600;user-select:all;overflow-wrap:anywhere}
+@media (max-width:640px){.contact{padding:32px 22px}}
+footer{padding-block:30px 44px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+footer .f{display:flex;align-items:center;gap:10px}
+
+
+/* ancrage */
+.anchor{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:var(--surface);border-radius:40px;padding:48px}
+.anchor .txt{display:flex;flex-direction:column;gap:18px}
+.anchor .txt p.lead{font-family:var(--f-display);font-style:italic;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.2;color:var(--burgundy);text-wrap:balance}
+.impact{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.impact li{display:flex;gap:14px;align-items:baseline;padding:12px 16px;background:var(--bg);border-radius:16px}
+.impact b{font-weight:600;min-width:7.5em}
+.impact span{color:var(--muted);font-size:.95rem}
+.mapbox{background:var(--rose-soft);border-radius:32px;padding:18px;min-width:0}
+.mapbox svg{display:block;width:100%;height:auto}
+@media (max-width:860px){.anchor{grid-template-columns:1fr;padding:26px 20px}.impact b{min-width:6.5em}}
+/* modal */
+dialog{border:0;border-radius:32px;padding:0;background:var(--surface);color:var(--ink);width:min(820px,calc(100vw - 28px));max-height:calc(100vh - 40px)}
+dialog::backdrop{background:rgba(58,22,34,.45)}
+.m-in{padding:36px;display:flex;flex-direction:column;gap:20px}
+.m-in h3{font-size:2rem;font-style:italic;color:var(--burgundy);padding-right:40px}
+.m-close{position:absolute;right:16px;top:16px;width:42px;height:42px;border-radius:50%;border:0;background:var(--bg);color:var(--burgundy);display:grid;place-items:center;cursor:pointer}
+.m-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.m-block{background:var(--bg);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.m-block.full{grid-column:1/-1}
+.m-block .kicker{color:var(--burgundy)}
+.m-block p{font-size:.97rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.gallery.phone{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.gallery img{width:100%;height:auto;border-radius:16px;display:block;background:var(--bg)}
+@media (max-width:600px){.m-grid{grid-template-columns:1fr}.m-in{padding:24px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<nav class="top" aria-label="Navigation principale">
+  <div class="wrap navbar">
+    <a class="logo" href="#top">Soukeyna<span>.</span></a>
+    <div class="navlinks"><a href="#ancrage">Ancrage</a><a href="#article">Article</a><a href="#projets">Projets</a><a href="#design">Design</a><a href="#parcours">Parcours</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></div>
+    <a class="btn sm primary" href="#contact">Me contacter</a>
+  </div>
+</nav>
+
+<header class="wrap hero" id="top">
+  <div class="hero-copy">
+    <span class="pill" style="align-self:flex-start"><span class="flag"><i></i><i></i><i></i></span>Thiès · École Polytechnique de Thiès</span>
+    <h1>Adja Soukeyna <span class="last">Diop</span></h1>
+    <p class="lede">Je conçois des solutions complètes, de l'idée à la mise en ligne&nbsp;: recherche en <b>systèmes distribués</b>, <b>intelligence artificielle</b> (machine learning, deep learning, vision, NLP, IA générative), <b>data et Big Data</b>, <b>applications web et mobiles</b>, <b>cloud et DevOps</b>, <b>objets connectés</b> et <b>design d'interfaces</b>. Pour la santé, l'éducation, l'agriculture, l'économie locale et bien au-delà.</p>
+    <div class="status">
+      <div><span class="dot"></span><span><b>Élève ingénieure</b> en fin de 2<sup>e</sup> année du cycle ingénieur GIT, 4<sup>e</sup> année de formation à l'EPT</span></div>
+      <div><span class="dot b"></span><span><b>Stagiaire</b> Data &amp; Backend Engineering chez Intouch</span></div>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="#projets">Mes projets <svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m7 7 10 10" /> <path d="M17 7v10H7" /> </svg></a>
+      <a class="btn" href="#article">Lire l'article</a>
+    </div>
+  </div>
+  <div class="portrait" role="img" aria-label="Portrait d'Adja Soukeyna Diop en uniforme d'apparat de l'École Polytechnique de Thiès">
+    <div class="ring"></div>
+    <div class="disc"></div><div class="cut"><img src="assets/img-01.webp" alt=""></div>
+    <span class="tag"><i></i>Data · IA · Design</span>
+  </div>
+</header>
+
+<section id="ancrage" style="padding-top:0">
+  <div class="wrap">
+    <div class="anchor">
+      <div class="txt">
+        <span class="kicker">Mon ancrage</span>
+        <h2>Pensé depuis Thiès, pour l'Afrique.</h2>
+        <p class="lead">Les solutions qui ont un impact direct sur le Sénégal et sur l'Afrique m'intéressent tout particulièrement.</p>
+        <ul class="impact">
+          <li><b>Santé</b><span>MediConnect, MediSen, dépistage de la drépanocytose</span></li>
+          <li><b>Réseaux</b><span>Un consensus distribué qui tient sur nos liaisons à forte latence</span></li>
+          <li><b>Éducation</b><span>Gindi Ma, EmoTeach, StudentAI</span></li>
+          <li><b>Économie locale</b><span>Natur'Teranga et les coopératives des terroirs</span></li>
+          <li><b>Eau &amp; agriculture</b><span>Speculum Solis, GlovIris</span></li>
+        </ul>
+      </div>
+      <div class="mapbox">
+        <svg viewBox="0 0 600 640" role="img" aria-label="Carte de l'Afrique avec le Sénégal aux couleurs du drapeau et Thiès signalée">
+          <defs><clipPath id="snclip"><path d="M105.1,173.1L105.8,174.3L105.7,174.8L105.5,175.6L105.9,176.2L106.3,176.6L106.6,176.9L106.9,177.4L107,178.3L106.9,179L107.2,179.3L107.3,179.7L107.3,180L107.2,180.3L106.8,180.7L106.7,181.4L107.4,182.3L107.8,182.7L107.8,183L107.9,183.3L108.2,183.6L108.4,183.6L108.6,183.3L108.7,183.1L109.3,183.2L109.6,183.3L109.9,183.8L110.1,184.2L110.2,184.7L110.5,185.3L110.9,185.7L110.9,185.9L111.2,186.3L111,187L111.1,187.4L110.9,188.5L110.8,189L110.8,189.2L111.3,189.5L111.2,190L110.8,189.9L110,189.9L108.4,190.2L107.8,190.1L106.8,190.1L106,190.2L105.1,190.6L104.3,190.5L103.9,190.2L103.4,190.2L102.8,190.1L102.2,189.8L101.6,189.7L101,189.2L100.7,189.1L100.5,189.3L100.3,189.4L100.1,189.5L99.8,189.4L99.7,189.1L99.8,188.8L99.8,188.6L99.7,188.4L99.3,188.4L98.7,188.4L97.7,188.3L97.5,188.2L95.2,188.2L93,188.1L91,188.1L88.6,188.1L86.8,188.1L85.2,188.1L84,188.8L82.6,189.4L80.8,189.8L78.7,189.7L78.1,189.8L77.4,190.1L76.9,190.3L76.2,190.4L75.2,190.3L74.8,190.4L74.6,190.1L74.4,189.6L74.5,189.2L75.1,188.9L75.9,188.6L76.4,188.8L76.6,188.8L76.7,188.6L76.6,188.5L76,188.2L75.6,187.9L75.4,188.1L75.1,188.5L74.9,188.6L74.6,188.8L74.5,188.5L74.4,188.2L74.5,187.9L74.5,186.7L74.6,186L74.5,185.4L74.9,185L75.3,184.8L76.8,184.8L78.2,184.7L79.5,184.8L80.9,184.8L81,183.6L81.4,183.5L82.1,183.4L83.3,183.2L84.6,183.1L84.9,182.9L85.1,182.5L85.3,182.1L85.5,182L85.9,182.1L86.4,182.3L86.9,182.6L87.5,182.8L87.9,183L88.8,183.4L90.4,184L91.7,184.2L93.3,183.8L94.4,183.5L94.6,183L94.4,182.5L93.6,182.1L92.4,182.1L92,182.2L91.5,182.4L91.2,182.4L90.6,182.3L89.9,181.9L89.5,181.5L88.9,181.4L88.2,181.2L87,180.4L86.4,180.2L85.8,180.2L84.7,180.3L83.6,180.8L83.1,181.7L82,181.7L79.7,181.7L77.6,181.7L75.9,181.7L75.7,181L75.3,180.5L74.6,180L74.5,179.5L74.7,179.1L75.3,178.8L75.5,178.6L75.2,178.6L74.7,178.8L74.3,178.8L74.3,178.2L73.7,177.4L73.1,176L72.3,175.4L71.7,174.3L71.1,173.9L70.5,173.7L70,173.7L69.9,174.2L69.2,173.5L70.1,173.3L71.9,172.3L74,169.7L75.8,166.6L76.1,165.8L76.3,165.3L76.4,164L76.7,163.2L77,163.1L77.3,162.5L77.7,161.5L78.1,160.9L78.6,160.8L79,160.8L79.2,161L80,161.2L81.3,161.2L82.3,161.1L83,160.7L84,160.5L85.1,160.5L85.7,160.4L85.8,160.1L85.9,160L86.2,160.1L86.4,160.1L86.6,159.9L86.8,159.8L87.1,160L88,160.1L89.7,160L91.3,160.6L92.8,161.7L93.6,162.5L93.6,162.9L93.8,163.2L94.3,163.6L94.7,163.7L95.1,163.4L95.3,163.5L95.5,163.8L96,163.8L96.4,163.7L96.8,163.7L96.8,163.9L96.9,164L97.1,164L97.4,164.3L97.9,164.9L98.2,165.7L98.5,166.8L98.8,167.4L99.3,167.5L99.5,167.7L99.6,168L99.7,168.2L99.9,168.3L100.3,168.2L100.7,168.6L101.2,169.4L101.3,169.7L101.2,169.9L101.2,170.1L101.5,170.2L101.8,170.4L102,170.8L102.6,171.2L103.3,171.5L103.9,171.9L104.3,172.6L105,173.1Z"/></clipPath></defs>
+          <path d="M420.8,282L422,282.7L446.8,296.7L447.2,300.7L457.1,307.5L453.9,316L454.3,319.9L458.7,322.4L458.9,324.2L457,328.3L457.4,330.4L457,333.7L459.3,338L462.2,344.9L464.7,346.4L459.2,350.4L451.8,353.1L447.7,353L445.2,355.1L440.5,355.3L438.7,356.2L430.5,354.2L425.3,354.8L423.4,345.3L421.1,342.1L419.7,340.2L413,338.9L409.1,336.8L404.8,335.6L402.1,334.5L399.2,332.7L395.5,324L391.6,320.2L390.2,316.2L390.9,312.6L389.6,306.3L392.5,306L394.9,303.5L397.6,299.9L399.3,298.5L399.2,296.2L397.8,294.7L397.4,292L399.3,291.1L399.7,287.1L397,283.3L399.4,282.4L406.9,282.5ZM129.8,78.6L129.9,79.2L129.7,80.7L129.7,92.2L107.3,91.8L107.5,111.1L101.1,111.8L99.4,115.6L100.7,126.2L73.9,126.2L72.5,128.6L72.8,125.5L72.9,125.5L88.3,125L89.1,122.3L91.9,119L94.1,108.7L103.6,100.7L106.9,91.1L109,90.5L111.2,84.6L117,83.8L119.4,84.8L122.5,84.8L124.8,83L129,82.8L128.8,78.6ZM389.6,306.3L390.9,312.6L390.2,316.2L391.6,320.2L395.5,324L399.2,332.7L396.5,332L387.3,333.2L385.5,334L383.6,338.4L385.1,341.5L383.9,349.7L383,356.7L384.9,357.9L389.7,360.6L391.5,359.4L392.1,366.9L386.9,366.9L384.1,363L381.5,360L376.3,359.1L374.8,355.4L370.6,357.6L365.1,356.6L362.8,353.5L358.5,352.8L355.3,353L354.9,350.8L352.6,350.6L349.4,350.2L345.2,351.3L342.2,351.1L340.5,351.7L340.9,343.5L338.6,340.9L338.1,336.6L339.1,332.5L337.7,329.8L337.6,325.5L329.3,325.5L329.9,323L326.4,323.1L326,324.3L321.8,324.5L320.1,328.6L319.1,330.3L315.3,329.3L313.1,330.3L308.5,330.8L305.9,327.2L304.3,325L302.4,320.9L300.7,315.7L280.5,315.7L278.1,316.5L276.1,316.4L273.3,317.3L272.4,315.1L274.1,314.4L274.3,311.4L275.4,309.7L277.9,308.2L279.7,308.9L282,306.3L285.8,306.4L286.2,308.3L288.8,309.5L292.8,305.2L296.8,301.9L298.5,299.7L298.3,294L301.2,287.4L304.4,283.9L308.9,280.6L309.7,278.4L309.8,275.9L310.9,273.5L310.6,269.7L311.4,263.6L312.8,259.3L314.8,255.7L315.2,251.5L315.8,246.8L318.5,243.3L322.2,241.1L327.8,243.4L332.2,245.9L337.1,246.6L342.2,247.9L344.3,243.8L345.2,243.3L348.3,244L355.9,240.5L358.7,242L360.9,241.8L361.9,240.1L364.4,239.5L369.6,240.2L374,240.4L376.2,239.7L380.4,245.3L383.4,246.2L385.3,245L388.4,245.5L392.2,244L393.8,246.9L399.8,251.5L399.5,259.5L402.2,260.4L400,262.9L397.4,264.7L394.8,268.2L393.3,271.4L392.9,276.9L391.3,279.5L391.3,284.7L389.3,286.6L389.1,290.6L388.1,291.2L387.5,294.9L389.2,298ZM473.4,287L469.3,281.4L469.2,256.5L475.2,248.7L477.1,246.5L481.4,246.4L487.5,241.6L496.4,241.3L515.8,220.6L520.5,214.8L523.6,210.6L523.6,207L523.6,200L523.6,197.1L523.7,197L525.9,196.8L529,195.8L532.6,195.1L535.9,192.7L538.5,192.7L538.6,194.6L538,198.7L538,202.3L536.6,204.9L534.6,212.4L531.4,220.1L527.1,228.9L521.3,239L515.4,246.6L507.4,256L500.5,261.5L490.3,268.3L484,273.5L476.5,281.8L474.9,285.4ZM457.1,307.5L447.2,300.7L446.8,296.7L422,282.7L420.8,282L420.8,274.7L422.7,272L426.1,267.5L428.6,262.5L425.6,254.6L424.8,251.2L421.5,246.4L425.7,242.3L430.4,237.8L433.9,239L433.9,242.8L436.3,245.1L441,245.1L449.7,250.9L451.8,251L453.4,250.8L454.9,251.6L459.5,252.1L461.5,249.2L467.8,246.4L470.5,248.7L475.2,248.7L469.2,256.5L469.3,281.4L473.4,287L468.6,289.7L466.9,292.6L464.3,293.1L463.3,297.9L461.1,300.7L459.8,305.2ZM357,219L351.8,216L349.4,214L349,211.9L350.1,209L350.1,206.2L346.2,201.8L345.4,198.8L345.5,197.2L343,195.1L342.9,191.1L341.5,188.3L339,188.8L339.7,186.2L341.5,183.3L340.7,180.3L343,178.2L341.6,176.5L343.3,172.2L346.5,167L352.4,167.4L352,139L352.1,135.9L360,135.9L360,121.3L387.5,121.3L414,121.3L441.1,121.3L443.3,128.5L441.8,129.8L442.8,137.3L445.3,146L447.9,147.7L451.6,150.4L448.2,154.5L443.2,155.7L441,157.9L440.3,162.6L437.4,173L438.1,175.9L437,181.9L434.2,188.8L430.1,192.3L427.2,197.6L426.5,200.5L423.2,202.4L421.2,209.7L421.3,215.9L421.3,210.5L420.3,210.4L420.4,206.9L419.6,204.5L416.1,201.8L415.3,196.8L416.1,191.6L412.9,191.1L412.4,192.7L408.3,193.1L410,195.1L410.6,199.3L406.8,203.1L403.4,208.1L399.9,208.8L394.1,204.8L391.6,206.2L390.8,208.2L387.3,209.5L387.1,211L380.3,211L379.3,209.5L374.4,209.3L372,210.5L370.1,209.9L366.6,205.9L365.4,203.9L360.4,204.9L358.6,208.1L356.8,214.3L354.5,215.6L352.4,216.4ZM352,139L352.4,167.4L346.5,167L343.3,172.2L341.6,176.5L343,178.2L340.7,180.3L341.5,183.3L339.7,186.2L339,188.8L341.5,188.3L342.9,191.1L343,195.1L345.5,197.2L345.4,198.8L341.1,200L337.6,202.9L332.6,210.4L326.2,213.6L319.6,213.2L317.7,213.8L318.4,216.3L314.8,218.7L311.9,221.4L303.3,224L301.6,222.5L300.5,222.3L299.2,224.1L293.5,224.6L294.6,222.8L292.5,218L291.5,215.1L288.5,214L284.5,209.9L286,206.6L289.1,207.3L291,206.9L294.8,206.9L291.1,200.6L291.4,196L290.9,191.3L288.2,186.9L288.9,183.5L284.5,183.4L284.5,178.9L281.7,176.2L284.6,166.9L293.3,160.2L293.7,150.9L296.3,136.2L297.8,133.1L294.9,130.6L294.8,128.3L292.3,126.4L290.6,114.9L297.5,110.8L324.8,125ZM300.8,479.5L304.1,475.6L306.8,477.8L307.9,481.1L311,481.7L315.3,483.1L319,482.6L325.1,478.6L325.1,450.3L326.9,451.5L331,458.7L330.4,463.3L331.9,466L336.8,465.2L340.2,461.8L343.4,459.5L345.1,455.9L348.4,454.1L351.3,455L354.6,457.2L360.2,457.5L364.5,455.8L365.2,453.4L366.4,449.8L370.1,449.2L372.2,446.4L374.5,441.4L380.6,435.8L390.3,430.4L393.1,430.5L396.4,431.7L398.7,430.8L402.3,431.6L405.6,442L407.4,447.3L406.1,455.7L406.7,458.5L403.3,457.1L401.3,457.6L400.7,459.8L398.8,462.7L398.8,465.3L402.9,469.5L406.9,468.7L408.3,465.2L413.5,465.3L411.8,470.9L411,477.3L409.2,480.8L404.5,484.8L403.2,485.9L400.3,489.9L398.4,494L394.5,499.7L386.8,508L382,512.8L376.8,516.5L369.7,519.7L366.2,520.1L365.3,522.4L361.2,521.2L357.8,522.8L350.4,521.2L346.2,522.2L343.4,521.8L336.4,525L330.5,526.3L326.3,529.5L323.2,529.7L320.3,526.7L318,526.6L315,522.9L314.7,524L313.8,521.8L313.8,517L311.6,511.5L313.8,510L313.6,503.9L309.2,496.4L305.7,489.7L305.7,489.7ZM387.2,482.4L384.2,480L381,481.6L377.3,484.7L373.6,489.7L378.8,495.7L381.2,494.9L382.5,492.4L386.3,491.2L387.4,488.6L389.5,484.8ZM387.2,482.4L389.5,484.8L387.4,488.6L386.3,491.2L382.5,492.4L381.2,494.9L378.8,495.7L373.6,489.7L377.3,484.7L381,481.6L384.2,480ZM402.3,431.6L398.7,430.8L396.4,431.7L393.1,430.5L390.3,430.4L385.9,427.1L380.6,425.9L378.6,421.3L378.6,418.7L375.7,417.9L367.9,409.9L365.8,405.8L364.4,404.5L361.8,398.7L369.4,399.5L371.6,400.3L374,400.2L377.7,395.5L383.7,389.6L386.1,389.1L387,386.6L390.9,383.8L396,382.8L396.5,385.5L402.2,385.3L405.3,386.8L406.8,388.6L410.1,389.1L413.6,391.4L413.6,400.5L412.3,405.4L412,410.9L413.1,413L412.3,417.3L411.3,417.9L409.5,423.2ZM390.3,430.4L380.6,435.8L374.5,441.4L372.2,446.4L370.1,449.2L366.4,449.8L365.2,453.4L364.5,455.8L360.2,457.5L354.6,457.2L351.3,455L348.4,454.1L345.1,455.9L343.4,459.5L340.2,461.8L336.8,465.2L331.9,466L330.4,463.3L331,458.7L326.9,451.5L325.1,450.3L325.1,428.6L331.8,428.4L332,402.4L337.1,402.2L347.7,399.7L350.3,402.6L354.6,399.8L356.7,399.8L360.5,398.2L361.8,398.7L364.4,404.5L365.8,405.8L367.9,409.9L375.7,417.9L378.6,418.7L378.6,421.3L380.6,425.9L385.9,427.1ZM325.1,450.3L325.1,478.6L319,482.6L315.3,483.1L311,481.7L307.9,481.1L306.8,477.8L304.1,475.6L300.8,479.5L295.7,473.6L293.1,468L291.5,460.5L289.9,455L287.6,443.5L287.4,434.6L286.6,430.5L283.9,427.5L280.4,421.4L276.8,412.7L275.3,408.2L269.7,401.1L269.3,395.6L272.6,394.2L276.7,393L281.1,393.2L285.2,396.5L286.2,396L313.9,395.7L318.7,399.1L335.2,400.1L347.8,397.2L353.4,395.6L357.8,396L360.5,397.6L360.5,398.2L356.7,399.8L354.6,399.8L350.3,402.6L347.7,399.7L337.1,402.2L332,402.4L331.8,428.4L325.1,428.6ZM110.4,189.8L110.7,187.6L110.1,184.9L107.6,182.9L106.2,178.9L105.9,174.5L108.2,173.2L109.4,169L111.5,168.9L116.3,170.8L120.2,169.4L122.8,169.9L123.8,168.3L151.2,168.2L152.8,163.2L151.6,162.4L148.3,131.3L145,99.2L155.4,99.1L178.5,115.4L201.6,131.5L203.2,134.9L207.4,137L210.6,138.2L210.7,142.8L218.3,142.1L218.3,158.6L214.5,163.4L214,167.7L207.9,168.9L198.6,169.5L196,172L191.7,172.3L187.3,172.3L185.6,170.9L181.8,172L175.4,174.9L174.1,177.1L168.8,180.3L167.9,182.1L165,183.5L161.7,182.6L159.8,184.3L158.8,189.1L153.4,194.9L153.6,197.2L151.7,200.2L152.1,204.2L149.3,205.3L147.7,206.1L146.7,203.1L144.7,203.9L143.5,203.8L142.3,205.8L137,205.8L135.1,204.7L134.2,205.4L132.1,203.4L132.5,201.3L131.6,200.5L130.2,201.2L130.4,198.9L131.8,197.1L129,194.2L128.2,192.2L126.7,190.7L125.3,190.5L123.7,191.5L121.5,192.4L119.6,194L116.7,193.4L114.8,191.6L113.7,191.4L111.9,192.3L110.8,192.3ZM72.5,128.6L73.9,126.2L100.7,126.2L99.4,115.6L101.1,111.8L107.5,111.1L107.3,91.8L129.7,92.2L129.7,80.7L155.4,99.1L145,99.2L148.3,131.3L151.6,162.4L152.8,163.2L151.2,168.2L123.8,168.3L122.8,169.9L120.2,169.4L116.3,170.8L111.5,168.9L109.4,169L108.2,173.2L105.9,174.5L101.4,169.6L97.2,164.4L92.7,162.5L89.4,160.4L85.6,160.5L82.3,162.1L78.9,161.4L76.5,163.7L76,159.9L77.9,156.4L78.7,149.6L78,142.5L77.1,138.9L77.8,135.2L76.1,131.8ZM207.5,232.6L201.9,233.4L200.2,228.7L200.5,212.8L199.1,211.4L198.8,208L196.5,205.6L194.4,203.5L195.2,199.9L197.6,199.1L199,196L202.3,195.4L203.8,193.3L206.1,191.2L208.6,191.2L213.8,195.2L213.5,197.6L215,201.7L213.7,204.5L214.4,206.4L211.1,210.7L209,212.8L207.7,217.1L207.9,221.5ZM290.6,114.9L292.3,126.4L294.8,128.3L294.9,130.6L297.8,133.1L296.3,136.2L293.7,150.9L293.3,160.2L284.6,166.9L281.7,176.2L284.5,178.9L284.5,183.4L288.9,183.5L288.2,186.9L286.3,187.3L286,189.5L284.8,189.6L280.1,182L278.5,181.7L273.2,185.6L267.9,183.6L264.2,183.1L262.2,184.1L258.2,183.9L254.2,186.9L250.7,187.1L242.4,183.5L239.2,185.2L235.7,185.1L233.2,182.4L226.3,179.8L219,180.6L217.2,182.1L216.2,186.2L214.3,189L213.8,195.2L208.6,191.2L206.1,191.2L203.8,193.3L204,188.5L196.1,186.9L195.9,183.5L192,178.9L191.1,175.7L191.7,172.3L196,172L198.6,169.5L207.9,168.9L214,167.7L214.5,163.4L218.3,158.6L218.3,142.1L227.9,138.8L247.7,124.5L271.1,110.4L281.9,113.6L285.8,117.7ZM207.5,232.6L207.9,221.5L207.7,217.1L209,212.8L211.1,210.7L214.4,206.4L213.7,204.5L215,201.7L213.5,197.6L213.8,195.2L214.3,189L216.2,186.2L217.2,182.1L219,180.6L226.3,179.8L233.2,182.4L235.7,185.1L239.2,185.2L242.4,183.5L250.7,187.1L254.2,186.9L258.2,183.9L262.2,184.1L264.2,183.1L267.9,183.6L273.2,185.6L278.5,181.7L280.1,182L284.8,189.6L286,189.5L288.7,192.3L288,193.5L287.6,195.9L281.9,201.2L280.1,205.7L279.1,209.3L277.6,210.8L276.3,215.7L272.6,218.5L271.6,222L270,224.8L269.4,227.7L264.7,230L260.8,227.2L258.3,227.3L254.2,231.3L252.2,231.4L249,238L247.2,242.8L240.1,245.3L237.5,245L234.9,246.5L229.4,246.3L225.7,242L223.5,237.1L218.7,232.6L213.5,232.6ZM288.2,186.9L290.9,191.3L291.4,196L291.1,200.6L294.8,206.9L291,206.9L289.1,207.3L286,206.6L284.5,209.9L288.5,214L291.5,215.1L292.5,218L294.6,222.8L293.5,224.6L290.1,231.6L288.4,232.8L287.9,238.2L288.6,241.1L288.1,243.1L291.3,246.7L291.9,249.2L294.4,252.7L297.5,254.9L297.8,258L298.5,260L298,263.7L292.6,262.1L287.1,260.3L278.5,260L277.6,259.6L273.6,260.5L269.4,259.6L266.2,260L255.1,259.9L256,254.5L253.4,250L250.3,248.8L248.9,245.7L247.1,244.7L247.2,242.8L249,238L252.2,231.4L254.2,231.3L258.3,227.3L260.8,227.2L264.7,230L269.4,227.7L270,224.8L271.6,222L272.6,218.5L276.3,215.7L277.6,210.8L279.1,209.3L280.1,205.7L281.9,201.2L287.6,195.9L288,193.5L288.7,192.3L286,189.5L286.3,187.3ZM195.2,199.9L194.4,203.5L196.5,205.6L198.8,208L199.1,211.4L200.5,212.8L200.2,228.7L201.9,233.4L196.3,234.9L194.8,232.5L193,228.1L192.5,224.7L194,218.5L192.3,216L191.6,210.5L191.6,205.5L188.8,201.9L189.3,199.7ZM189.3,199.7L188.8,201.9L191.6,205.5L191.6,210.5L192.3,216L194,218.5L192.5,224.7L193,228.1L194.8,232.5L196.3,234.9L185.6,238.9L181.8,241.3L175.7,243.3L169.6,241.3L169.9,238.6L166.9,232.7L168.7,224.9L171.6,219.1L169.8,209.3L168.8,204.1L169,200.1L180.9,199.8L183.9,200.3L186.1,199.2ZM134.2,205.4L135.1,204.7L137,205.8L142.3,205.8L143.5,203.8L144.7,203.9L146.7,203.1L147.7,206.1L149.3,205.3L152.1,204.2L155.2,205.7L156.4,208L159.5,209.5L161.9,207.7L165.1,207.5L169.8,209.3L171.6,219.1L168.7,224.9L166.9,232.7L169.9,238.6L169.6,241.3L166.5,241.4L161.7,240L157.3,240.1L149.2,241.3L144.5,243.3L137.7,245.8L136.4,245.6L136.9,240L137.6,239.1L137.4,236.4L134.5,233.5L132.3,233.1L130.3,231.2L131.8,228.1L131.1,224.8L131.4,222.8L132.5,222.8L132.9,219.8L132.4,218.5L133,217.5L135.6,216.7L133.9,211.1L132.3,208.2L132.9,205.9ZM95.4,188.8L98.7,188.8L103.7,190.5L105.2,190.4L105.7,189.6L109.4,190.2L110.4,189.8L110.8,192.3L111.9,192.3L113.7,191.4L114.8,191.6L116.7,193.4L119.6,194L121.5,192.4L123.7,191.5L125.3,190.5L126.7,190.7L128.2,192.2L129,194.2L131.8,197.1L130.4,198.9L130.2,201.2L131.6,200.5L132.5,201.3L132.1,203.4L134.2,205.4L132.9,205.9L132.3,208.2L133.9,211.1L135.6,216.7L133,217.5L132.4,218.5L132.9,219.8L132.5,222.8L131.4,222.8L129.5,222.6L128.1,225.4L126.2,225.4L124.8,223.9L125.3,221.1L122.4,216.9L120.6,217.7L119.2,217.8L117.3,218.2L117.3,215.7L116.3,213.9L116.5,211.9L115,209L113.1,206.5L107.6,206.5L106,207.8L104.2,207.9L103,209.4L102.2,211.3L98.5,214.4L95.5,210.3L92.9,207.6L91.1,206.7L89.4,205.3L88.7,202.2L87.6,200.7L85.7,199.6L88.7,196.2L90.8,196.3L92.6,195.1L94.1,195.1L95.2,194.2L94.6,191.9L95.3,191.1ZM75.1,190.2L78.7,189L81,189.3L82.8,188.5L95.4,188.8L95.3,191.1L94.6,191.9L95.2,194.2L94.1,195.1L92.6,195.1L90.8,196.3L88.7,196.2L85.7,199.6L82,196.6L79.1,196.2L77.6,194.2L77.6,193.2L75.5,191.7ZM131.4,222.8L131.1,224.8L131.8,228.1L130.3,231.2L132.3,233.1L134.5,233.5L137.4,236.4L137.6,239.1L136.9,240L136.4,245.6L134.6,245.7L127.5,242.4L121.3,237.2L115.5,233.4L110.9,229L112.5,226.8L112.9,224.8L116,221.1L119.2,217.8L120.6,217.7L122.4,216.9L125.3,221.1L124.8,223.9L126.2,225.4L128.1,225.4L129.5,222.6ZM98.5,214.4L102.2,211.3L103,209.4L104.2,207.9L106,207.8L107.6,206.5L113.1,206.5L115,209L116.5,211.9L116.3,213.9L117.3,215.7L117.3,218.2L119.2,217.8L116,221.1L112.9,224.8L112.5,226.8L110.9,229L109.1,228.5L104.1,225.7L100.6,222L99.4,219.5ZM152.1,204.2L151.7,200.2L153.6,197.2L153.4,194.9L158.8,189.1L159.8,184.3L161.7,182.6L165,183.5L167.9,182.1L168.8,180.3L174.1,177.1L175.4,174.9L181.8,172L185.6,170.9L187.3,172.3L191.7,172.3L191.1,175.7L192,178.9L195.9,183.5L196.1,186.9L204,188.5L203.8,193.3L202.3,195.4L199,196L197.6,199.1L195.2,199.9L189.3,199.7L186.1,199.2L183.9,200.3L180.9,199.8L169,200.1L168.8,204.1L169.8,209.3L165.1,207.5L161.9,207.7L159.5,209.5L156.4,208L155.2,205.7ZM376.2,239.7L374,240.4L369.6,240.2L364.4,239.5L361.9,240.1L360.9,241.8L358.7,242L355.9,240.5L348.3,244L345.2,243.3L344.3,243.8L342.2,247.9L337.1,246.6L332.2,245.9L327.8,243.4L322.2,241.1L318.5,243.3L315.8,246.8L315.2,251.5L310.8,251.1L306.2,250L302.1,253.6L298.5,260L297.8,258L297.5,254.9L294.4,252.7L291.9,249.2L291.3,246.7L288.1,243.1L288.6,241.1L287.9,238.2L288.4,232.8L290.1,231.6L293.5,224.6L299.2,224.1L300.5,222.3L301.6,222.5L303.3,224L311.9,221.4L314.8,218.7L318.4,216.3L317.7,213.8L319.6,213.2L326.2,213.6L332.6,210.4L337.6,202.9L341.1,200L345.4,198.8L346.2,201.8L350.1,206.2L350.1,209L349,211.9L349.4,214L351.8,216L357,219L360.8,221.8L360.8,224.1L365.4,227.7L368.3,230.6L370,234.8L375.1,237.5ZM315.2,251.5L314.8,255.7L312.8,259.3L311.4,263.6L310.6,269.7L310.9,273.5L309.8,275.9L309.7,278.4L308.9,280.6L304.4,283.9L301.2,287.4L298.3,294L298.5,299.7L296.8,301.9L292.8,305.2L288.8,309.5L286.2,308.3L285.8,306.4L282,306.3L279.7,308.9L277.9,308.2L275.4,305.9L273.3,307L270.5,310L264.9,302.7L270.1,298.9L267.6,294.4L269.9,292.7L274.5,291.8L275.1,288.8L278.7,292.1L284.7,292.4L286.8,289.2L287.7,284.6L286.9,279.3L283.7,275.2L286.7,267.3L285,266L279.9,266.5L278,263L278.5,260L287.1,260.3L292.6,262.1L298,263.7L298.5,260L302.1,253.6L306.2,250L310.8,251.1ZM266.2,260L269.4,259.6L273.6,260.5L277.6,259.6L278.5,260L278,263L279.9,266.5L285,266L286.7,267.3L283.7,275.2L286.9,279.3L287.7,284.6L286.8,289.2L284.7,292.4L278.7,292.1L275.1,288.8L274.5,291.8L269.9,292.7L267.6,294.4L270.1,298.9L264.9,302.7L257.9,295.8L253.4,290.2L249.2,283.1L249.4,280.8L250.9,278.6L252.6,273.7L254,268.6L256.3,268.2L266.2,268.3ZM255.1,259.9L266.2,260L266.2,268.3L256.3,268.2L254,268.6L252.7,267.6ZM399.2,332.7L402.1,334.5L404.8,335.6L409.1,336.8L413,338.9L416.2,342L418,347.9L416.8,349.7L415.4,355.4L416.8,361.2L414.6,363.6L412.5,370.1L416.1,372L395.4,377.8L396,382.8L390.9,383.8L387,386.6L386.1,389.1L383.7,389.6L377.7,395.5L374,400.2L371.6,400.3L369.4,399.5L361.8,398.7L360.5,398.2L360.5,397.6L357.8,396L353.4,395.6L347.8,397.2L343.3,392.7L338.7,386.9L339,364.4L353.3,364.5L352.7,362.1L353.7,359.5L352.5,356.2L353.3,352.8L352.6,350.6L354.9,350.8L355.3,353L358.5,352.8L362.8,353.5L365.1,356.6L370.6,357.6L374.8,355.4L376.3,359.1L381.5,360L384.1,363L386.9,366.9L392.1,366.9L391.5,359.4L389.7,360.6L384.9,357.9L383,356.7L383.9,349.7L385.1,341.5L383.6,338.4L385.5,334L387.3,333.2L396.5,332ZM413,338.9L419.7,340.2L421.1,342.1L423.4,345.3L425.3,354.8L423.4,360.1L425.3,369.2L427.7,369.1L430.2,371.4L433,376.5L433.6,385.6L430.7,387.1L428.6,392L424.1,387.6L423.6,382.6L425,379.3L424.7,376.5L421.9,374.7L420,375.4L416.1,372L412.5,370.1L414.6,363.6L416.8,361.2L415.4,355.4L416.8,349.7L418,347.9L416.2,342ZM425.3,354.8L430.5,354.2L438.7,356.2L440.5,355.3L445.2,355.1L447.7,353L451.8,353.1L459.2,350.4L464.7,346.4L465.8,349.5L465.5,356.5L466.3,362.6L466.6,373.6L467.8,377L465.8,382.1L463.1,387L458.8,391.4L452.5,394.2L444.8,397.6L437.1,405.4L434.5,406.7L429.7,411.8L426.9,413.5L426.3,418.7L429.5,424.2L430.9,428.5L431,430.7L432.2,430.4L432,437.6L430.9,441.1L432.5,442.4L431.5,445.5L428.6,448.2L423,450.7L414.8,454.8L411.8,457.6L412.3,460.8L414.1,461.3L413.5,465.3L408.3,465.2L407.7,461.9L406.7,458.5L406.1,455.7L407.4,447.3L405.6,442L402.3,431.6L409.5,423.2L411.3,417.9L412.3,417.3L413.1,413L412,410.9L412.3,405.4L413.6,400.5L413.6,391.4L410.1,389.1L406.8,388.6L405.3,386.8L402.2,385.3L396.5,385.5L396,382.8L395.4,377.8L416.1,372L420,375.4L421.9,374.7L424.7,376.5L425,379.3L423.6,382.6L424.1,387.6L428.6,392L430.7,387.1L433.6,385.6L433,376.5L430.2,371.4L427.7,369.1L425.3,369.2L423.4,360.1ZM408.3,465.2L406.9,468.7L402.9,469.5L398.8,465.3L398.8,462.7L400.7,459.8L401.3,457.6L403.3,457.1L406.7,458.5L407.7,461.9ZM277.9,308.2L275.4,309.7L274.3,311.4L274.1,314.4L272.4,315.1L270.5,310L273.3,307L275.4,305.9ZM273.3,317.3L276.1,316.4L278.1,316.5L280.5,315.7L300.7,315.7L302.4,320.9L304.3,325L305.9,327.2L308.5,330.8L313.1,330.3L315.3,329.3L319.1,330.3L320.1,328.6L321.8,324.5L326,324.3L326.4,323.1L329.9,323L329.3,325.5L337.6,325.5L337.7,329.8L339.1,332.5L338.1,336.6L338.6,340.9L340.9,343.5L340.5,351.7L342.2,351.1L345.2,351.3L349.4,350.2L352.6,350.6L353.3,352.8L352.5,356.2L353.7,359.5L352.7,362.1L353.3,364.5L339,364.4L338.7,386.9L343.3,392.7L347.8,397.2L335.2,400.1L318.7,399.1L313.9,395.7L286.2,396L285.2,396.5L281.1,393.2L276.7,393L272.6,394.2L269.3,395.6L268.7,391.1L269.6,384.9L272,378.4L272.3,375.3L274.5,369L276.2,366.1L280.1,361.5L282.3,358.4L283,353.2L282.6,349.3L280.6,346.8L278.8,342.6L277.1,338.4L277.5,337L279.6,334.2L277.5,327.6L276.1,323L272.7,318.6ZM397.4,292L397.8,294.7L399.2,296.2L399.3,298.5L397.6,299.9L394.9,303.5L392.5,306L389.6,306.3L389.2,298L387.5,294.9L391.7,295.4L393.7,291.6ZM527.7,361.4L529.6,364.4L531.3,369L532.4,377.5L534.1,380.8L533.4,384.2L532.2,386.3L529.9,382.2L528.6,384.3L529.9,389.5L529.3,392.5L527.4,394.2L527,400.3L524.3,408.7L520.9,418.7L516.7,432.6L514.1,442.9L511,451.6L505.5,453.4L499.5,456.6L495.5,454.7L490.1,452L488.2,448L487.8,441.4L485.4,435.5L484.7,430.1L486,424.8L489.1,423.6L489.1,421.1L492.4,415.6L493,411L491.4,407.5L490.2,403L489.6,396.4L492,392.4L492.9,387.9L496.3,387.6L500.1,386.1L502.7,384.8L505.7,384.8L509.5,380.7L515.2,376.4L517.2,372.8L516.3,369.8L519.2,370.6L523,365.8L523.1,361.5L525.4,358.4ZM74.8,181.7L82.3,181.5L83.8,179.8L86,179.7L88.7,181.4L90.8,181.5L93.1,180.3L94.5,182.3L91.5,183.9L88.5,183.8L85.6,182.3L83.1,183.9L81.8,184L80.2,185L74,184.8ZM253.9,57.9L251,43.6L246.8,40.3L246.7,38.4L241.1,33.5L240.5,27.3L244.7,22.7L246.3,15.8L245.3,7.8L246.7,3.4L254.1,-0.1L258.9,0.9L258.7,5.3L264.5,2.1L265,3.8L261.6,8L261.5,11.9L263.9,14L263,21.2L258.5,25.4L259.8,29.9L263.3,30L265,33.9L267.6,35.2L267.2,41.4L263.9,43.8L261.8,46.3L257.1,49.4L257.8,52.7L257.2,56.1ZM129.7,80.7L129.9,79.2L129.8,78.6L129.8,69.5L140.8,63.7L147.7,62.5L153.3,60.4L155.9,56.4L163.9,53.3L164.2,47.3L168.1,46.6L171.2,43.7L180.1,42.3L181.4,39.1L179.6,37.4L177.2,28.8L176.8,23.8L174.3,18.4L180.8,13.8L188.2,12.4L192.5,8.9L199.1,6.3L210.7,4.8L222,4.1L225.5,5.3L231.9,2L239.2,1.9L242,3.9L246.7,3.4L245.3,7.8L246.3,15.8L244.7,22.7L240.5,27.3L241.1,33.5L246.7,38.4L246.8,40.3L251,43.6L253.9,57.9L256.1,64.9L256.5,68.5L255.3,74.9L255.8,78.4L254.9,82.6L255.5,87.4L252.8,90.6L256.8,96.2L257.1,99.4L259.5,103.6L262.7,102.2L268.1,105.7L271.1,110.4L247.7,124.5L227.9,138.8L218.3,142.1L210.7,142.8L210.6,138.2L207.4,137L203.2,134.9L201.6,131.5L178.5,115.4L155.4,99.1ZM438.1,175.9L437.4,173L440.3,162.6L441,157.9L443.2,155.7L448.2,154.5L451.6,150.4L455.6,158.7L457.5,165.2L461.2,168.7L470.6,175.4L474.4,179.4L478.1,183.4L480.2,185.9L483.6,188L481.5,189.7L478.6,189.1L476.3,186.8L473.4,182.7L470.4,180.4L468.7,178L462.7,175.2L458,175.1L456.3,173.6L452.3,175.3L448.2,172.1L446.1,177.3ZM174.3,18.4L176.8,23.8L177.2,28.8L179.6,37.4L181.4,39.1L180.1,42.3L171.2,43.7L168.1,46.6L164.2,47.3L163.9,53.3L155.9,56.4L153.3,60.4L147.7,62.5L140.8,63.7L129.8,69.5L129.8,78.6L128.8,78.6L129,82.8L124.8,83L122.5,84.8L119.4,84.8L117,83.8L111.2,84.6L109,90.5L106.9,91.1L103.6,100.7L94.1,108.7L91.9,119L89.1,122.3L88.3,125L72.9,125.5L72.8,125.5L73.1,122.1L75.7,120.1L77.9,116.3L77.5,113.8L79.8,108.5L83.7,103.7L85.9,102.5L87.8,98.1L87.9,94.1L90.4,89.4L94.9,86.6L99.3,78.8L99.4,78.7L102.8,75.7L109.2,74.9L114.6,69.5L118,67.4L123.7,60.9L122,51L124.6,44.1L125.5,39.8L129.9,34.3L136.8,30.6L141.8,27.2L146.4,18.6L148.6,13.5L153.6,13.5L157.7,17.1L164.2,16.5L171.3,18.3ZM441.1,121.3L414,121.3L387.5,121.3L360,121.3L360,93.8L360,66.4L357.9,60L359.7,55.1L358.6,51.7L361.1,47.9L370.2,47.8L376.8,49.9L383.6,52.2L386.7,53.5L392,50.9L394.8,48.6L400.8,48L405.7,49L407.5,53L409.1,50.4L414.6,52.2L420,52.7L423.3,50.7L427.1,62.3L427.8,64.3L425.9,67.4L424.4,73.3L422.6,77.4L421,78.7L418.7,76.2L415.6,72.8L410.7,61.5L410,62.3L412.8,70.5L417,78.3L422.2,90.3L424.7,94.4L426.9,98.7L433.1,107L431.7,108.3L431.9,113.1L439.9,119.8ZM360,121.3L360,135.9L352.1,135.9L352,139L324.8,125L297.5,110.8L290.6,114.9L285.8,117.7L281.9,113.6L271.1,110.4L268.1,105.7L262.7,102.2L259.5,103.6L257.1,99.4L256.8,96.2L252.8,90.6L255.5,87.4L254.9,82.6L255.8,78.4L255.3,74.9L256.5,68.5L256.1,64.9L253.9,57.9L257.2,56.1L257.8,52.7L257.1,49.4L261.8,46.3L263.9,43.8L267.2,41.4L267.6,35.2L275.7,38L278.5,37.3L284.2,38.6L293.3,42.3L296.5,49.4L302.6,51L312.3,54.3L319.6,58.3L322.9,56.2L326.2,52.5L324.6,46.4L326.7,42.5L331.6,38.7L336.4,37.6L345.6,39.3L347.9,42.9L350.5,42.9L352.6,44.3L359.4,45.2L361.1,47.9L358.6,51.7L359.7,55.1L357.9,60L360,66.4L360,93.8ZM515.8,220.6L496.4,241.3L487.5,241.6L481.4,246.4L477.1,246.5L475.2,248.7L470.5,248.7L467.8,246.4L461.5,249.2L459.5,252.1L454.9,251.6L453.4,250.8L451.8,251L449.7,250.9L441,245.1L436.3,245.1L433.9,242.8L433.9,239L430.4,237.8L426.3,230.3L423.2,228.7L422,226L418.5,222.6L414.3,222.1L416.7,218.2L420.3,218L421.3,215.9L421.2,209.7L423.2,202.4L426.5,200.5L427.2,197.6L430.1,192.3L434.2,188.8L437,181.9L438.1,175.9L446.1,177.3L448.2,172.1L452.3,175.3L456.3,173.6L458,175.1L462.7,175.2L468.7,178L470.4,180.4L473.4,182.7L476.3,186.8L478.6,189.1L476.2,192.2L473.9,195.4L474.4,197.4L474.5,199.5L478.3,199.6L480,199.1L481.5,200.4L480,202.8L482.5,206.6L485,210L487.6,212.4L510,220.7ZM478.6,189.1L481.5,189.7L483.6,188L485.2,190.1L485,193L481.1,194.7L484,196.6L481.5,200.4L480,199.1L478.3,199.6L474.5,199.5L474.4,197.4L473.9,195.4L476.2,192.2ZM420.8,282L406.9,282.5L399.4,282.4L397,283.3L392.9,285.4L391.3,284.7L391.3,279.5L392.9,276.9L393.3,271.4L394.8,268.2L397.4,264.7L400,262.9L402.2,260.4L399.5,259.5L399.8,251.5L402.7,249.6L407,251.2L412.5,249.6L417.3,249.6L421.5,246.4L424.8,251.2L425.6,254.6L428.6,262.5L426.1,267.5L422.7,272L420.8,274.7ZM397,283.3L399.7,287.1L399.3,291.1L397.4,292L393.7,291.6L391.7,295.4L387.5,294.9L388.1,291.2L389.1,290.6L389.3,286.6L391.3,284.7L392.9,285.4ZM399.8,251.5L393.8,246.9L392.2,244L388.4,245.5L385.3,245L383.4,246.2L380.4,245.3L376.2,239.7L375.1,237.5L370,234.8L368.3,230.6L365.4,227.7L360.8,224.1L360.8,221.8L357,219L352.4,216.4L354.5,215.6L356.8,214.3L358.6,208.1L360.4,204.9L365.4,203.9L366.6,205.9L370.1,209.9L372,210.5L374.4,209.3L379.3,209.5L380.3,211L387.1,211L387.3,209.5L390.8,208.2L391.6,206.2L394.1,204.8L399.9,208.8L403.4,208.1L406.8,203.1L410.6,199.3L410,195.1L408.3,193.1L412.4,192.7L412.9,191.1L416.1,191.6L415.3,196.8L416.1,201.8L419.6,204.5L420.4,206.9L420.3,210.4L421.3,210.5L421.3,215.9L420.3,218L416.7,218.2L414.3,222.1L418.5,222.6L422,226L423.2,228.7L426.3,230.3L430.4,237.8L425.7,242.3L421.5,246.4L417.3,249.6L412.5,249.6L407,251.2L402.7,249.6Z" fill="#FFFFFF" stroke="#EFD3CE" stroke-width="1.2" stroke-linejoin="round"/>
+          <g clip-path="url(#snclip)"><rect x="69" y="158" width="14.1" height="34" fill="#00853F"/><rect x="83.1" y="158" width="14.1" height="34" fill="#FDEF42"/><rect x="97.2" y="158" width="14.2" height="34" fill="#E31B23"/></g>
+          <path d="M105.1,173.1L105.8,174.3L105.7,174.8L105.5,175.6L105.9,176.2L106.3,176.6L106.6,176.9L106.9,177.4L107,178.3L106.9,179L107.2,179.3L107.3,179.7L107.3,180L107.2,180.3L106.8,180.7L106.7,181.4L107.4,182.3L107.8,182.7L107.8,183L107.9,183.3L108.2,183.6L108.4,183.6L108.6,183.3L108.7,183.1L109.3,183.2L109.6,183.3L109.9,183.8L110.1,184.2L110.2,184.7L110.5,185.3L110.9,185.7L110.9,185.9L111.2,186.3L111,187L111.1,187.4L110.9,188.5L110.8,189L110.8,189.2L111.3,189.5L111.2,190L110.8,189.9L110,189.9L108.4,190.2L107.8,190.1L106.8,190.1L106,190.2L105.1,190.6L104.3,190.5L103.9,190.2L103.4,190.2L102.8,190.1L102.2,189.8L101.6,189.7L101,189.2L100.7,189.1L100.5,189.3L100.3,189.4L100.1,189.5L99.8,189.4L99.7,189.1L99.8,188.8L99.8,188.6L99.7,188.4L99.3,188.4L98.7,188.4L97.7,188.3L97.5,188.2L95.2,188.2L93,188.1L91,188.1L88.6,188.1L86.8,188.1L85.2,188.1L84,188.8L82.6,189.4L80.8,189.8L78.7,189.7L78.1,189.8L77.4,190.1L76.9,190.3L76.2,190.4L75.2,190.3L74.8,190.4L74.6,190.1L74.4,189.6L74.5,189.2L75.1,188.9L75.9,188.6L76.4,188.8L76.6,188.8L76.7,188.6L76.6,188.5L76,188.2L75.6,187.9L75.4,188.1L75.1,188.5L74.9,188.6L74.6,188.8L74.5,188.5L74.4,188.2L74.5,187.9L74.5,186.7L74.6,186L74.5,185.4L74.9,185L75.3,184.8L76.8,184.8L78.2,184.7L79.5,184.8L80.9,184.8L81,183.6L81.4,183.5L82.1,183.4L83.3,183.2L84.6,183.1L84.9,182.9L85.1,182.5L85.3,182.1L85.5,182L85.9,182.1L86.4,182.3L86.9,182.6L87.5,182.8L87.9,183L88.8,183.4L90.4,184L91.7,184.2L93.3,183.8L94.4,183.5L94.6,183L94.4,182.5L93.6,182.1L92.4,182.1L92,182.2L91.5,182.4L91.2,182.4L90.6,182.3L89.9,181.9L89.5,181.5L88.9,181.4L88.2,181.2L87,180.4L86.4,180.2L85.8,180.2L84.7,180.3L83.6,180.8L83.1,181.7L82,181.7L79.7,181.7L77.6,181.7L75.9,181.7L75.7,181L75.3,180.5L74.6,180L74.5,179.5L74.7,179.1L75.3,178.8L75.5,178.6L75.2,178.6L74.7,178.8L74.3,178.8L74.3,178.2L73.7,177.4L73.1,176L72.3,175.4L71.7,174.3L71.1,173.9L70.5,173.7L70,173.7L69.9,174.2L69.2,173.5L70.1,173.3L71.9,172.3L74,169.7L75.8,166.6L76.1,165.8L76.3,165.3L76.4,164L76.7,163.2L77,163.1L77.3,162.5L77.7,161.5L78.1,160.9L78.6,160.8L79,160.8L79.2,161L80,161.2L81.3,161.2L82.3,161.1L83,160.7L84,160.5L85.1,160.5L85.7,160.4L85.8,160.1L85.9,160L86.2,160.1L86.4,160.1L86.6,159.9L86.8,159.8L87.1,160L88,160.1L89.7,160L91.3,160.6L92.8,161.7L93.6,162.5L93.6,162.9L93.8,163.2L94.3,163.6L94.7,163.7L95.1,163.4L95.3,163.5L95.5,163.8L96,163.8L96.4,163.7L96.8,163.7L96.8,163.9L96.9,164L97.1,164L97.4,164.3L97.9,164.9L98.2,165.7L98.5,166.8L98.8,167.4L99.3,167.5L99.5,167.7L99.6,168L99.7,168.2L99.9,168.3L100.3,168.2L100.7,168.6L101.2,169.4L101.3,169.7L101.2,169.9L101.2,170.1L101.5,170.2L101.8,170.4L102,170.8L102.6,171.2L103.3,171.5L103.9,171.9L104.3,172.6L105,173.1Z" fill="none" stroke="#7A1F35" stroke-width="1.4"/>
+          <path d="M73.4 173.3 Q103.9 140.8 134.4 188.4" fill="none" stroke="#7A1F35" stroke-width="1.3" stroke-dasharray="2 5" opacity=".55"/><circle cx="134.4" cy="188.4" r="3.5" fill="#F2C9C4" stroke="#7A1F35" stroke-width="1.2"/><path d="M73.4 173.3 Q142.8 162.0 212.2 230.8" fill="none" stroke="#7A1F35" stroke-width="1.3" stroke-dasharray="2 5" opacity=".55"/><circle cx="212.2" cy="230.8" r="3.5" fill="#F2C9C4" stroke="#7A1F35" stroke-width="1.2"/><path d="M73.4 173.3 Q257.0 188.8 440.6 284.3" fill="none" stroke="#7A1F35" stroke-width="1.3" stroke-dasharray="2 5" opacity=".55"/><circle cx="440.6" cy="284.3" r="3.5" fill="#F2C9C4" stroke="#7A1F35" stroke-width="1.2"/><path d="M73.4 173.3 Q234.0 191.0 394.6 288.8" fill="none" stroke="#7A1F35" stroke-width="1.3" stroke-dasharray="2 5" opacity=".55"/><circle cx="394.6" cy="288.8" r="3.5" fill="#F2C9C4" stroke="#7A1F35" stroke-width="1.2"/><path d="M73.4 173.3 Q105.3 62.5 137.2 31.7" fill="none" stroke="#7A1F35" stroke-width="1.3" stroke-dasharray="2 5" opacity=".55"/><circle cx="137.2" cy="31.7" r="3.5" fill="#F2C9C4" stroke="#7A1F35" stroke-width="1.2"/><path d="M73.4 173.3 Q227.1 277.2 380.8 461.2" fill="none" stroke="#7A1F35" stroke-width="1.3" stroke-dasharray="2 5" opacity=".55"/><circle cx="380.8" cy="461.2" r="3.5" fill="#F2C9C4" stroke="#7A1F35" stroke-width="1.2"/><path d="M73.4 173.3 Q238.0 76.7 402.6 60.1" fill="none" stroke="#7A1F35" stroke-width="1.3" stroke-dasharray="2 5" opacity=".55"/><circle cx="402.6" cy="60.1" r="3.5" fill="#F2C9C4" stroke="#7A1F35" stroke-width="1.2"/>
+          <circle cx="73.4" cy="173.3" r="5" fill="#7A1F35" stroke="#fff" stroke-width="2"/>
+          <g transform="translate(150,96)"><rect x="0" y="-20" width="122" height="34" rx="17" fill="#7A1F35"/><text x="61" y="2" text-anchor="middle" font-family="Outfit, sans-serif" font-size="15" font-weight="600" fill="#fff">Thiès, Sénégal</text></g>
+          <path d="M150 92 Q100 110 78 166" fill="none" stroke="#7A1F35" stroke-width="1.5" stroke-dasharray="3 4"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="article" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><div class="l"><span class="kicker">Publication</span><h2>Mon article de recherche</h2></div></div>
+    <article class="paper">
+      <div class="sheet"><img src="assets/img-02.webp" alt="En-tête de l'article : La fenêtre de randomisation, et non le timeout"></div>
+      <div class="txt">
+        <span class="kicker" style="color:var(--burgundy)">Systèmes distribués · Article</span>
+        <h3>La fenêtre de randomisation, et non le timeout&nbsp;: un critère de stabilité en forme close pour l'élection de leader Raft sur des liens à forte latence</h3>
+        <p class="authors">Adja Soukeyna Diop, Aissatou Sow, Ibrahima Gueye · École Polytechnique de Thiès</p>
+        <ul>
+          <li><b>Constat</b><span>Raft est réglé pour des datacenters, pas pour les liaisons d'Afrique de l'Ouest.</span></li>
+          <li><b>Méthode</b><span>Simulateur SimPy calibré sur des mesures ARCEP et nPerf, pertes en rafales.</span></li>
+          <li><b>Résultat</b><span>Une transition de phase entre 40 et 60 ms, et un critère de stabilité en forme close.</span></li>
+        </ul>
+        <button class="btn primary" type="button" data-p="raft" style="align-self:flex-start">Lire le résumé <svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="projets" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head"><div class="l"><span class="kicker">Projets</span><h2>Ce que j'ai construit</h2></div><p style="max-width:40ch">Cliquez sur un projet pour lire l'étude complète&nbsp;: contexte, décisions, difficultés et résultats.</p></div>
+    <div class="grid">
+      <button class="card wide" data-p="rutina">
+        <div class="media phones"><img src="assets/img-03.webp" alt=""> <img src="assets/img-04.webp" alt=""> <img src="assets/img-05.webp" alt=""></div>
+        <div class="body">
+          <span class="kicker">Application mobile · IA · Design</span>
+          <h3>Rutina</h3>
+          <p>Le compagnon quotidien pour de meilleures habitudes&nbsp;: habitudes, objectifs et OKR, finances, humeur, santé et concentration dans une seule app. Tina, le coach IA, répond à partir des vraies données de l'utilisateur. L'app fonctionne d'abord hors ligne, puis se synchronise avec le cloud.</p>
+          <div class="tags"><span>Flutter</span><span>Riverpod</span><span>Supabase</span><span>Gemini</span><span>Android · iOS · Web</span></div>
+          <span class="go">Voir l'étude <svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span>
+        </div>
+      </button>
+      <button class="card" data-p="natur">
+        <div class="media duo"><img src="assets/img-06.webp" alt=""><img src="assets/img-07.webp" alt=""></div>
+        <div class="body">
+          <span class="kicker">E-commerce · Web</span>
+          <h3>Natur'Teranga</h3>
+          <p>Le goût des terroirs du Sénégal&nbsp;: produits de 25 coopératives tracés jusqu'au lot, carte interactive des terroirs, livraison depuis Paris et Dakar.</p>
+          <div class="tags"><span>E-commerce</span><span>Carte interactive</span><span>UI/UX</span></div>
+          <span class="go">Voir l'étude <svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span>
+        </div>
+      </button>
+      <button class="card" data-p="medi">
+        <div class="media cover"><img src="assets/img-08.webp" alt=""></div>
+        <div class="body">
+          <span class="kicker">Santé numérique · Full-stack</span>
+          <h3>MediConnect Sénégal</h3>
+          <p>Télémédecine&nbsp;: espaces médecin et patient, transferts entre établissements avec comptes rendus, agenda et vidéoconsultation.</p>
+          <div class="tags"><span>React</span><span>Spring Boot</span><span>PostgreSQL</span><span>Jitsi</span></div>
+          <span class="go">Voir l'étude <svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span>
+        </div>
+      </button>
+      <button class="card" data-p="sickle">
+        <div class="media cover"><img src="assets/img-09.webp" alt="" style="object-position:center"></div>
+        <div class="body">
+          <span class="kicker">Deep learning · Santé</span>
+          <h3>IA et drépanocytose</h3>
+          <p>Sept architectures de vision comparées pour détecter les globules falciformes, avec explicabilité Grad-CAM et tests de robustesse.</p>
+          <div class="tags"><span>PyTorch</span><span>MaxViT</span><span>EfficientFormer</span><span>Grad-CAM</span></div>
+          <span class="go">Voir l'étude <svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span>
+        </div>
+      </button>
+      <button class="card" data-p="medisen">
+        <div class="media contain"><img src="assets/img-10.webp" alt=""></div>
+        <div class="body">
+          <span class="kicker">Santé numérique · Primé à l'IT DAY 2025</span>
+          <h3>MediSen</h3>
+          <p>Une identité médicale par QR code&nbsp;: dossier patient, rendez-vous, rappels, assistant conversationnel et accès aux urgences.</p>
+          <div class="tags"><span>Conception produit</span><span>QR code</span><span>IA</span></div>
+          <span class="go">Voir l'étude <svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span>
+        </div>
+      </button>
+      <button class="card wide" data-p="report">
+        <div class="media"><div class="layers"><span class="l1">RAW <small>données brutes</small></span><span class="l2">BRONZE <small>nettoyage</small></span><span class="l3">SILVER <small>modèle</small></span><span class="l4">GOLD <small>agrégats</small></span><span class="l5">API <small>+ cache Redis</small></span></div></div>
+        <div class="body">
+          <span class="kicker">Data Engineering · Stage</span>
+          <h3>Plateforme de reporting pour une fintech de paiement</h3>
+          <p>Deux API Spring Boot de reporting alimentées par un pipeline BigQuery en couches. Les calculs vivent dans les tables agrégées, pas dans l'API, qui reste rapide et testable.</p>
+          <div class="tags"><span>Spring Boot</span><span>BigQuery</span><span>Dataform</span><span>Keycloak</span><span>Cloud Run</span></div>
+          <span class="go">Voir l'étude <svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></span>
+        </div>
+      </button>
+    </div>
+
+    <div class="more">
+      <div>
+        <h3>Aussi réalisés</h3>
+        <div class="rows">
+          <button class="row" data-p="ecoles"><span><b>Gindi Ma</b><span class="d">L'annuaire des écoles du Sénégal pour parents et apprenants</span></span><span class="t">Web</span></button>
+          <button class="row" data-p="emo"><span><b>EmoTeach</b><span class="d">Émotions en classe&nbsp;: visage, voix et texte</span></span><span class="t">IA multimodale</span></button>
+          <button class="row" data-p="carnet"><span><b>StudentAI</b><span class="d">Rapports et fiches de révision générés par LLM</span></span><span class="t">IA générative</span></button>
+          <button class="row" data-p="wave"><span><b>WaveGuard</b><span class="d">Détection de fraude en streaming</span></span><span class="t">Big Data</span></button>
+          <button class="row" data-p="flow"><span><b>FlowTrack</b><span class="d">Détection et suivi de véhicules</span></span><span class="t">Vision</span></button>
+          <button class="row" data-p="solis"><span><b>Speculum Solis</b><span class="d">Purification d'eau solaire, 3<sup>e</sup> prix national AGEIS</span></span><span class="t">IoT</span></button>
+          <button class="row" data-p="glov"><span><b>GlovIris</b><span class="d">Agriculture de précision et capteurs connectés</span></span><span class="t">IoT</span></button>
+          <button class="row" data-p="llm"><span><b>LLM sur Kubernetes</b><span class="d">Ollama et Open WebUI auto-hébergés</span></span><span class="t">MLOps</span></button>
+        </div>
+      </div>
+      <div>
+        <h3>Travaux techniques</h3>
+        <div class="chips">
+          <span>Pipeline CI/CD Jenkins</span><span>Infrastructure Terraform</span><span>Docker Compose</span><span>Warehouse, Lake, Lakehouse</span><span>HTTPS et TLS avec OpenSSL</span><span>Téléphonie IP avec Asterisk</span><span>Administration Oracle 19c</span><span>Backend réactif WebFlux</span><span>Cache distribué Hazelcast</span><span>Refonte MVC vers MVP</span><span>Gestion des SLA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="design" style="padding-top:20px">
+  <div class="wrap">
+    <div class="design">
+      <div class="txt">
+        <span class="kicker">Design &amp; créativité</span>
+        <h2>Je dessine aussi ce que je construis.</h2>
+        <p>La créativité est au cœur de ma façon de travailler. Avant d'écrire du code, je pose les écrans, les couleurs et le parcours. Je conçois mes interfaces, mes icônes, mes visuels de présentation et mes schémas techniques.</p>
+        <div class="chips"><span>Figma</span><span>Canva</span><span>UI/UX mobile et web</span><span>Prototypage</span><span>Design system</span><span>Icônes et illustrations</span></div>
+      </div>
+      <div class="shots"><img src="assets/img-11.webp" alt="Écran Journal et humeur de Rutina"><img src="assets/img-12.webp" alt="Écran Bien-être de Rutina"></div>
+    </div>
+  </div>
+</section>
+
+<section id="competences" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head"><div class="l"><span class="kicker">Compétences</span><h2>Ma boîte à outils</h2></div></div>
+    <div class="skills">
+      <div class="sk"><h3>Langages</h3><div class="chips"><span>Java</span><span>Python</span><span>SQL</span><span>JavaScript / TypeScript</span><span>Dart</span><span>HTML / CSS</span></div></div>
+      <div class="sk"><h3>IA &amp; Machine Learning</h3><div class="chips"><span>Machine learning</span><span>Deep learning</span><span>Computer vision</span><span>NLP et audio</span><span>IA générative et LLM</span><span>IA multimodale</span></div></div>
+      <div class="sk"><h3>Data &amp; Big Data</h3><div class="chips"><span>BigQuery</span><span>Dataform</span><span>PostgreSQL / MySQL</span><span>Spark</span><span>Kafka</span><span>Airflow</span><span>Oracle</span></div></div>
+      <div class="sk"><h3>Backend</h3><div class="chips"><span>Spring Boot</span><span>API REST</span><span>FastAPI</span><span>Django</span><span>Supabase</span><span>Redis / Hazelcast</span></div></div>
+      <div class="sk"><h3>Frontend &amp; mobile</h3><div class="chips"><span>React / Next.js</span><span>Angular</span><span>Vaadin</span><span>Bootstrap</span><span>Flutter</span><span>Riverpod</span></div></div>
+      <div class="sk"><h3>Cloud, DevOps &amp; réseaux</h3><div class="chips"><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>Terraform</span><span>Google Cloud</span><span>Git</span><span>Linux</span><span>Keycloak</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="parcours" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head"><div class="l"><span class="kicker">Parcours</span><h2>Formation &amp; distinctions</h2></div></div>
+    <div class="path">
+      <div class="col">
+        <h3>Formation</h3>
+        <ul class="steps">
+          <li><span class="when">Année en cours</span><b>Cycle ingénieur GIT · École Polytechnique de Thiès</b><p>Fin de 2<sup>e</sup> année du cycle ingénieur en Génie Informatique et Télécommunications, 4<sup>e</sup> année de formation.</p></li>
+          <li><span class="when">Stage en cours</span><b>Data &amp; Backend Engineering · Intouch</b><p>API de reporting et pipelines BigQuery, refonte d'un tableau de bord, cache distribué, gestion des SLA.</p></li>
+          <li><span class="when">Baccalauréat</span><b>Bac S1 · mention Bien</b><p>Lycée Seydina Limamou Laye.</p></li>
+          <li><span class="when">BFEM</span><b>Collège La Maïeutique</b><p>Première de mon centre d'examen.</p></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Distinctions &amp; engagement</h3>
+        <ul class="steps">
+          <li class="win"><span class="when">Hackathon</span><b>2<sup>e</sup> prix · SkyTech, AIBD</b><p>Remporté en équipe au hackathon de l'Aéroport International Blaise Diagne.</p></li>
+          <li class="win"><span class="when">Hackathon · 2025</span><b>Primée · IT DAY</b><p>Avec MediSen, projet primé en équipe au hackathon de l'IT DAY 2025.</p></li>
+          <li class="win"><span class="when">Concours national</span><b>3<sup>e</sup> prix · AGEIS</b><p>Avec Speculum Solis, purification d'eau par énergie solaire.</p></li>
+          <li class="win"><span class="when">BFEM</span><b>Première du centre</b><p>Meilleur résultat de mon centre d'examen.</p></li>
+          <li><span class="when">Engagement</span><b>Responsable de classe</b><p>Impliquée dans la filière GIT, l'école et la communauté Galsen AI.</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apropos" style="padding-top:20px">
+  <div class="wrap about">
+    <div style="display:flex;flex-direction:column;gap:14px"><span class="kicker">À propos</span><p class="big">Software Engineering × Data × IA, au service de la santé, de l'éducation et de l'agriculture.</p></div>
+    <div class="txt">
+      <p>Mon terrain de jeu est large. En recherche, j'ai écrit un <b>article sur le consensus Raft</b> dans les réseaux à forte latence et comparé des <b>modèles de deep learning</b> pour le dépistage de la drépanocytose. J'explore toute l'IA&nbsp;: vision, NLP, audio, IA multimodale et IA générative. En stage, je construis des <b>pipelines de données et des API de reporting</b> sur BigQuery.</p>
+      <p>Je conçois aussi des produits complets, du design à la mise en ligne&nbsp;: plateformes web, applications mobiles, pipelines Big Data, déploiements cloud et prototypes IoT.</p>
+      <div class="quals"><span>Créative</span><span>Curieuse</span><span>Entreprenante</span><span>Leader</span><span>Rigoureuse</span><span>Tournée vers l'impact</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:20px;padding-bottom:0">
+  <div class="wrap">
+    <div class="contact">
+      <span class="kicker">Contact</span>
+      <h2>Construisons quelque chose d'utile.</h2>
+      <div class="links">
+        <a class="btn primary" href="https://www.linkedin.com/in/adja-soukeyna-diop-735b5931a" target="_blank" rel="noopener"><svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /> <rect width="4" height="12" x="2" y="9" /> <circle cx="4" cy="4" r="2" /> </svg> LinkedIn</a>
+        <a class="btn" style="background:var(--bg)" href="https://github.com/AdjaSoukeynaDiop" target="_blank" rel="noopener"><svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /> <path d="M9 18c-4.51 2-5-2-7-2" /> </svg> GitHub</a>
+      </div>
+      <div class="mail"><svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="16" x="2" y="4" rx="2" /> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /> </svg><a id="mail-addr" href="mailto:diopas@ept.edu.sn" style="font-weight:600;text-decoration:none">diopas@ept.edu.sn</a><button class="btn sm" type="button" id="copy-mail"><svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /> </svg><span>Copier</span></button></div>
+    </div>
+    <footer><span class="f"><span class="flag"><i></i><i></i><i></i></span>© 2026 Adja Soukeyna Diop · Thiès, Sénégal</span><span>Projets professionnels présentés sous forme anonymisée.</span></footer>
+  </div>
+</section>
+
+<dialog id="modal" aria-labelledby="m-title">
+  <button class="m-close" id="m-close" aria-label="Fermer"><svg class="i" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 6 6 18" /> <path d="m6 6 12 12" /> </svg></button>
+  <div class="m-in" id="m-body"></div>
+</dialog>
+
+<script>
+const SHOTS={"emoteach": "assets/img-13.webp", "mc-agenda": "assets/img-14.webp", "mc-cr": "assets/img-15.webp", "mc-dossiers": "assets/img-08.webp", "mc-patient": "assets/img-16.webp", "mc-transfert": "assets/img-17.webp", "medisen": "assets/img-10.webp", "nt-avis": "assets/img-18.webp", "nt-dark": "assets/img-07.webp", "nt-hero": "assets/img-06.webp", "raft-article": "assets/img-02.webp", "rut-bienetre": "assets/img-12.webp", "rut-coach": "assets/img-03.webp", "rut-finances": "assets/img-05.webp", "rut-humeur": "assets/img-11.webp", "rut-objectifs": "assets/img-04.webp", "rut-profil": "assets/img-19.webp", "sickle": "assets/img-09.webp"};
+const G={raft:["raft-article"],sickle:["sickle"],medi:["mc-dossiers","mc-agenda","mc-transfert","mc-patient","mc-cr"],natur:["nt-hero","nt-dark","nt-avis"],medisen:["medisen"],rutina:["rut-coach","rut-objectifs","rut-finances","rut-bienetre","rut-humeur","rut-profil"]};
+const P={
+ raft:{t:"La fenêtre de randomisation, et non le timeout",d:"Article de recherche · Systèmes distribués",
+  ctx:"Les algorithmes de consensus comme Raft sont réglés pour des datacenters à faible latence. En Afrique de l'Ouest, les liaisons inter-sites ont des latences élevées, variables, et des pertes en rafales.",
+  role:"Conception et implémentation du simulateur, calibration des modèles réseau, campagne d'expériences et rédaction de l'article.",
+  dec:"Une simulation à événements discrets plutôt qu'un banc réel, pour balayer des centaines de configurations de façon reproductible. Latences log-normales calibrées sur ARCEP et nPerf, pertes modélisées par une chaîne de Gilbert-Elliott.",
+  diff:"Rendre le modèle crédible. Une latence moyenne ne suffit pas&nbsp;: ce sont la variance et les pertes corrélées qui déclenchent des élections de leader en cascade.",
+  res:"Une transition de phase entre 40 et 60 ms rend Raft de base instable. À 150 ms, la configuration conservatrice et la variante adaptative avec pre-vote présentent un compromis documenté dans l'article.",
+  stack:["Python","SimPy","Raft","Gilbert-Elliott"],link:"Article et dépôt du simulateur bientôt publics"},
+ sickle:{t:"Benchmark IA pour la drépanocytose",d:"Recherche · Vision médicale",
+  ctx:"La drépanocytose touche fortement l'Afrique de l'Ouest. Un outil d'aide à l'analyse de frottis sanguins doit rester fiable sur des images de qualité variable.",
+  role:"Protocole expérimental, entraînement et comparaison des modèles, analyse d'explicabilité et de robustesse.",
+  dec:"Optimisation du score F2, qui pénalise davantage les faux négatifs&nbsp;: en dépistage, manquer un cas coûte plus cher qu'une fausse alerte. Validation croisée à 5 plis.",
+  diff:"Le meilleur modèle sur images propres n'est pas le plus robuste. Les tests sur images floues, bruitées ou compressées ont changé la recommandation finale.",
+  res:"EfficientFormerV2-S0 est le meilleur sur images propres, MaxViT-Tiny résiste mieux aux dégradations. Grad-CAM montre que les modèles regardent bien la morphologie des cellules.",
+  stack:["PyTorch","ResNet50","EfficientFormerV2","MaxViT","Grad-CAM"],link:"Notebook Colab et tableau de résultats"},
+ report:{t:"Plateforme de reporting",d:"Expérience pro · Fintech de paiement",
+  ctx:"Une entreprise de paiement a besoin d'indicateurs financiers et de performance transactionnelle fiables, exposés à ses applications internes.",
+  role:"Conception et développement de deux API de reporting, du pipeline de transformation jusqu'au déploiement.",
+  dec:"Les calculs sont faits dans des tables agrégées (couches RAW, BRONZE, SILVER, GOLD sous Dataform), pas dans l'API. L'API reste mince, rapide et testable. Cache Redis en cache-aside, contrats d'API validés.",
+  diff:"Intégrer le tout dans un backend existant sans le casser, et sortir les secrets du dépôt.",
+  res:"API sécurisées par JWT via Keycloak et déployées sur Cloud Run. Passerelle Apigee en cours d'intégration.",
+  stack:["Java","Spring Boot","BigQuery","Dataform","Redis","Keycloak","Cloud Run"],link:"Étude de cas anonymisée · aucun code ni donnée interne publié"},
+ medi:{t:"MediConnect Sénégal",d:"HealthTech · Projet d'équipe",ctx:"Le suivi des patients souffre de dossiers dispersés, de transferts entre établissements mal suivis et d'un accès inégal aux spécialistes.",role:"Développement full-stack en équipe.",dec:"Deux espaces distincts&nbsp;: un espace médecin (dossiers de transfert, ordonnances, agenda, constantes, alertes, cartographie) et un espace patient (profil, rendez-vous, consultations, ordonnances, confidentialité). Chaque transfert suit un statut clair&nbsp;: demande reçue, en attente, accepté, effectué.",diff:"Gérer plusieurs rôles et protéger les données de santé. Chaque transfert porte son compte rendu médical, et les consultations vidéo passent par un lien Jitsi généré pour le rendez-vous.",res:"Plateforme fonctionnelle&nbsp;: transferts et comptes rendus, agenda avec vidéoconsultation, propositions de nouvelle date côté patient, carte des structures de soins. Les données affichées sont fictives.",stack:["React","Spring Boot","PostgreSQL","Jitsi","FHIR","Leaflet","PWA"],link:""},
+ emo:{t:"EmoTeach",d:"Recherche · IA multimodale",
+  ctx:"Comprendre l'engagement des apprenants peut aider les enseignants à adapter leur pédagogie.",
+  role:"Intégration des modèles et conception de la stratégie de fusion.",
+  dec:"Trois modèles spécialisés (ViT pour le visage, Wav2Vec2/XLS-R pour la voix, DistilBERT pour le texte) dont les prédictions sont fusionnées.",
+  diff:"Les émotions détectées sont des estimations, pas des vérités. Le système affiche ses incertitudes et traite la confidentialité comme une contrainte de conception.",
+  res:"Prototype temps réel via WebSockets, avec une section dédiée aux limites de la reconnaissance émotionnelle.",
+  stack:["ViT","Wav2Vec2 XLS-R","DistilBERT","React","Jitsi","Quart","WebSockets","PostgreSQL"],link:"Dépôt à venir"},
+ wave:{t:"WaveGuard",d:"Projet académique · Streaming",
+  ctx:"La fraude au paiement mobile se détecte en quelques secondes, ou pas du tout.",
+  role:"Conception de l'architecture de flux et intégration des composants.",
+  dec:"Kafka pour une ingestion découplée, Spark pour le traitement, Airflow pour l'orchestration, Grafana pour la supervision.",
+  diff:"Faire dialoguer cinq composants distribués de façon fiable et observable.",
+  res:"Pipeline de bout en bout sur des transactions simulées, avec tableaux de bord de suivi.",
+  stack:["Kafka","ZooKeeper","Spark","Airflow","MinIO","Grafana"],link:"Dépôt à venir"},
+ llm:{t:"LLM sur Kubernetes",d:"Lab · MLOps",ctx:"Héberger soi-même des modèles de langage, sans dépendre d'une API.",role:"Déploiement complet.",dec:"Namespace dédié et volumes persistants pour ne pas retélécharger les modèles à chaque redémarrage.",diff:"Latence et timeouts sur les modèles les plus lourds&nbsp;: diagnostic et ajustements documentés.",res:"Comparaison pratique de deepseek-r1 et mistral.",stack:["Kubernetes","Minikube","Ollama","Open WebUI"],link:"Article « ce que j'ai appris » à venir"},
+ flow:{t:"FlowTrack",d:"Lab · Computer vision",ctx:"Mesurer le trafic routier sans capteurs coûteux.",role:"Pipeline de détection et interface.",dec:"YOLOv8 pour la détection, ByteTrack pour suivre chaque véhicule d'une image à l'autre.",diff:"Éviter les doubles comptages lors des occlusions.",res:"Import de vidéos, statistiques par classe de véhicule, estimation des vitesses et export des résultats dans une interface React.",stack:["Python","YOLOv8m","ByteTrack","React"],link:"Dépôt à venir"},
+ carnet:{t:"StudentAI",d:"Lab · IA générative",ctx:"Les étudiants passent beaucoup de temps à mettre en forme rapports de stage, exposés et fiches de révision.",role:"Conception full-stack.",dec:"Front Next.js, backend FastAPI, modèle de langage qui produit un contenu structuré, puis génération du fichier DOCX. Authentification et bucket privé Supabase pour les documents.",diff:"Produire un français académique propre et une mise en page directement exploitable.",res:"Génération de rapports, d'exposés et de fiches de révision téléchargeables.",stack:["Next.js","FastAPI","Supabase","LLM","DOCX"],link:"Démo à venir"},
+ natur:{t:"Natur'Teranga",d:"E-commerce · Web",ctx:"Faire découvrir et vendre les produits des terroirs du Sénégal (miel de mangrove, bissap, bouye, café Touba) à des clients en Europe et en Afrique de l'Ouest.",role:"Conception et réalisation du site.",dec:"Une carte interactive du Sénégal où l'on touche un terroir pour voir ses produits, et un sélecteur de zone de livraison qui adapte le parcours&nbsp;: expédition depuis Paris pour l'Europe, depuis Dakar pour l'Afrique de l'Ouest.",diff:"Inspirer confiance à distance&nbsp;: produits tracés jusqu'au lot, avis relus par l'équipe et clairement distingués des exemples, frais et délais de livraison affichés au panier.",res:"Catalogue, carte des 14 terroirs de 25 coopératives, panier, avis clients, livraison par zone, espace équipe, thème clair et sombre, et un panneau «&nbsp;Coulisses techniques&nbsp;» qui montre le fonctionnement du site.",stack:["E-commerce","Carte interactive","UI/UX","Thème clair et sombre"],link:""},
+ medisen:{t:"MediSen",d:"Santé numérique · Primé au hackathon IT DAY 2025",ctx:"Au Sénégal, l'information médicale d'un patient est souvent dispersée, et l'accès aux soins d'urgence reste difficile.",role:"Conception produit et présentation, en équipe.",dec:"Une identité médicale accessible par QR code qui relie dossier patient, recherche de médecins, rendez-vous, rappels, chatbot et services d'urgence.",diff:"Protéger des données de santé tout en les rendant accessibles en situation d'urgence. Un kit portable d'analyse par microscope et IA (paludisme, dengue) fait partie de la vision.",res:"Projet primé en équipe au hackathon de l'IT DAY 2025. Concept et prototype de plateforme&nbsp;; les fonctionnalités en cours de développement sont signalées comme telles.",stack:["Conception produit","QR code","Chatbot","IA"],link:""},
+ jenkins:{t:"Pipeline CI/CD Jenkins",d:"Projet de cours · DevOps",ctx:"Automatiser la construction, les tests et le déploiement d'une application.",role:"Présentation en équipe&nbsp;: workflow Jenkins et comparaison avec des outils similaires.",dec:"Un pipeline en trois étapes Build, Test, Deploy, illustré par des schémas réalisés pour l'occasion.",diff:"Rendre un sujet technique clair pour toute la classe.",res:"Présentation et schémas du workflow et des plugins.",stack:["Jenkins","CI/CD","Git"],link:""},
+ lake:{t:"Warehouse, Lake, Lakehouse",d:"Projet de cours · Big Data",ctx:"Choisir une architecture de stockage analytique.",role:"Étude et démonstration.",dec:"Comparaison illustrée avec BigQuery, Google Cloud Storage et Spark, et étude des formats Parquet et ORC.",diff:"Comprendre quand chaque architecture est pertinente.",res:"Démonstration comparative des trois approches.",stack:["BigQuery","Cloud Storage","Spark","Parquet"],link:""},
+ tls:{t:"HTTPS & TLS",d:"TP · Sécurité",ctx:"Sécuriser un serveur web.",role:"Mise en œuvre.",dec:"Génération de certificats avec OpenSSL et configuration TLS d'Apache.",diff:"Comprendre la chaîne de confiance des certificats.",res:"Serveur Apache servi en HTTPS.",stack:["OpenSSL","Apache","TLS"],link:""},
+ toip:{t:"Téléphonie sur IP",d:"TP · Réseaux",ctx:"Mettre en place un service de téléphonie sur IP.",role:"Mise en œuvre.",dec:"Serveur Asterisk sous WSL, clients Zoiper et Linphone.",diff:"Configuration réseau entre WSL et les clients.",res:"Appels entre clients sur le serveur Asterisk.",stack:["Asterisk","SIP","WSL","Linphone"],link:""},
+ rutina:{t:"Rutina",d:"Application mobile multiplateforme · IA · Design",ctx:"Construire des habitudes durables demande de suivre plusieurs choses à la fois&nbsp;: habitudes, objectifs, argent, humeur, santé, concentration. Rutina réunit tout cela dans une seule app Flutter pour Android, iOS, le web et le desktop.",role:"Conception, design et développement de l'application.",dec:"Une stratégie «&nbsp;local d'abord, réconciliée avec le cloud&nbsp;»&nbsp;: chaque donnée est écrite en local immédiatement puis synchronisée avec Supabase en arrière-plan, pour qu'aucune action n'attende le réseau. Architecture par fonctionnalités avec Riverpod et go_router, tables PostgreSQL protégées par Row Level Security.",diff:"Faire un coach IA honnête&nbsp;: Tina répond à partir des vraies données de l'utilisateur via une Edge Function Supabase qui appelle Gemini, avec un moteur de règles local en repli si l'IA distante ne répond pas. Et un mode Focus qui verrouille vraiment l'écran pendant la session.",res:"Habitudes et séries, objectifs annuels, mensuels et OKR, finances avec budgets et coffres d'épargne, journal d'humeur, hydratation et sommeil, respiration guidée, minuteur Pomodoro, niveaux, XP, badges et classement, graphiques de progression, connexion biométrique et notifications.",stack:["Flutter","Dart","Riverpod","go_router","Supabase","PostgreSQL + RLS","Edge Functions","Gemini","fl_chart","local_auth"],link:""},
+ ecoles:{t:"Gindi Ma",d:"EdTech · L'annuaire des écoles du Sénégal · Projet d'équipe",ctx:"Pour choisir un établissement, parents et apprenants doivent souvent chercher l'information à plusieurs endroits.",role:"Réalisation en équipe.",dec:"Rassembler sur une même plateforme toutes les écoles du Sénégal avec les informations nécessaires pour s'orienter.",diff:"Collecter et structurer des informations d'établissements nombreux et variés.",res:"Une plateforme qui répertorie les écoles du pays pour les parents et les apprenants.",stack:["Plateforme web","Données"],link:""},
+ oracle:{t:"Oracle Database 19c",d:"TP · Bases de données",ctx:"Mettre en place et administrer une base de données Oracle.",role:"Mise en œuvre.",dec:"Installation et configuration d'un environnement Oracle 19c.",diff:"Maîtriser les étapes d'installation et d'administration.",res:"Environnement Oracle opérationnel.",stack:["Oracle 19c","SQL"],link:""},
+ solis:{t:"Speculum Solis",d:"Innovation · CleanTech",ctx:"L'accès à l'eau potable reste un défi dans de nombreuses zones rurales.",role:"Membre de l'équipe projet.",dec:"Concentration de chaleur solaire, évaporation puis condensation, suivi par capteurs.",diff:"Associer physique, prototypage et instrumentation IoT.",res:"3e prix au concours national AGEIS.",stack:["IoT","Capteurs","Énergie solaire"],link:""},
+ glov:{t:"GlovIris",d:"Prototype · AgriTech",ctx:"Les petits exploitants manquent d'informations sur la qualité de leur sol.",role:"Conception du prototype.",dec:"Capteurs Arduino reliés en Bluetooth à une app Flutter.",diff:"Rendre les mesures lisibles pour un non-spécialiste.",res:"Prototype fonctionnel. L'IA embarquée reste une piste.",stack:["Flutter","Arduino","Bluetooth"],link:""},
+ iac:{t:"Infrastructure as Code",d:"Lab · Cloud",ctx:"Décrire une infrastructure cloud de façon reproductible.",role:"Projet individuel.",dec:"Terraform sur une émulation AWS locale (S3, DynamoDB).",diff:"Gérer proprement l'état Terraform.",res:"Infrastructure créée et détruite à la demande.",stack:["Terraform","AWS S3","DynamoDB"],link:""},
+ ticket:{t:"Ticketing réactif",d:"Backend · Systèmes réactifs",ctx:"Un moteur de tickets doit encaisser des pics de charge sans perdre d'événements.",role:"Développement backend.",dec:"Pile réactive WebFlux et R2DBC sur MySQL, mécanismes événementiels.",diff:"Transactions et gestion d'erreurs dans un modèle non bloquant.",res:"Étude de cas sur les choix de fiabilité.",stack:["Spring WebFlux","R2DBC","MySQL"],link:"Présenté sous forme anonymisée"}
+};
+const modal=document.getElementById('modal'),mb=document.getElementById('m-body');
+function openP(k){const p=P[k];if(!p)return;
+ const blk=(l,v,full)=>v?`<div class="m-block${full?' full':''}"><span class="kicker">${l}</span><p>${v}</p></div>`:'';
+ mb.innerHTML=`<span class="kicker">${p.d}</span><h3 id="m-title">${p.t}</h3>
+ <div class="m-grid">${blk('Contexte',p.ctx,1)}${blk('Mon rôle',p.role)}${blk('Décision clé',p.dec)}${blk('Difficulté',p.diff)}${blk('Résultat',p.res)}</div>
+ <div class="tags">${p.stack.map(s=>`<span>${s}</span>`).join('')}</div>
+ ${G[k]?`<div class="gallery${k==='rutina'?' phone':''}">${G[k].map(n=>`<img src="${SHOTS[n]}" alt="">`).join('')}</div>`:''}
+ ${p.link?`<p style="color:var(--muted);font-size:.92rem">${p.link}</p>`:''}`;
+ modal.showModal();}
+document.querySelectorAll('[data-p]').forEach(el=>el.addEventListener('click',()=>openP(el.dataset.p)));
+document.getElementById('m-close').onclick=()=>modal.close();
+modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});
+document.getElementById('copy-mail').addEventListener('click',e=>{const s=e.currentTarget.querySelector('span'),a=document.getElementById('mail-addr');
+ const sel=()=>{const r=document.createRange();r.selectNodeContents(a);const g=getSelection();g.removeAllRanges();g.addRange(r)};
+ try{navigator.clipboard.writeText(a.textContent).then(()=>{s.textContent='Copié';setTimeout(()=>s.textContent='Copier',1800)},sel)}catch(err){sel()}});
+</script>
+
+</body>
+</html>
